@@ -1,5 +1,12 @@
 class AddChefNameToRestaurants < ActiveRecord::Migration[6.1]
   def change
-    add_column :restaurants, :chef_name, :string
+    create_table :restaurants do |t|
+      t.string :name
+      t.string :address
+      t.string :phone_number
+      t.string :category
+
+      t.timestamps
+    end
   end
 end
